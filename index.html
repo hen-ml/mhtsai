@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ming-Hen (Henry) Tsai</title>
-<meta name="description" content="Ming-Hen (Henry) Tsai, machine learning practitioner in the San Francisco Bay Area. Member of Technical Staff at Arena; previously Coupang and Google.">
+<meta name="description" content="Ming-Hen (Henry) Tsai, machine learning leader in the San Francisco Bay Area. Member of Technical Staff at Arena; previously Coupang and Google.">
 <meta property="og:title" content="Ming-Hen (Henry) Tsai">
-<meta property="og:description" content="Machine learning practitioner. Member of Technical Staff at Arena; previously Coupang and Google.">
+<meta property="og:description" content="Machine learning leader. Member of Technical Staff at Arena; previously Coupang and Google.">
 <meta property="og:image" content="pics/jasper.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231f5f8b'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' text-anchor='middle' fill='white'>H</text></svg>">
 <style>
@@ -83,16 +83,15 @@
   .desc ul { margin: 4px 0 0; padding-left: 18px; }
   .desc li { margin: 2px 0; }
 
-  .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
-  .card {
-    display: block; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 10px;
-    color: inherit; transition: border-color .15s, background .15s;
-  }
-  a.card:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
-  .card .name { font-weight: 600; color: var(--accent); }
-  div.card .name { color: var(--fg); }
-  .card .year { color: var(--muted); font-size: 0.85rem; font-weight: 400; margin-left: 4px; }
-  .card .what { font-size: 0.9rem; color: var(--muted); margin-top: 4px; line-height: 1.45; }
+  .project { display: grid; grid-template-columns: 240px 1fr; gap: 22px; align-items: start; padding: 0 0 26px; margin: 0 0 26px; border-bottom: 1px solid var(--rule); }
+  .project:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .project img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; border-radius: 8px; border: 1px solid var(--rule); }
+  .project h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .project h3 .year { color: var(--muted); font-weight: 400; font-size: 0.88rem; margin-left: 6px; }
+  .project p { font-size: 0.95rem; margin: 0 0 10px; }
+  .plinks { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .plinks a { display: inline-block; font-size: 0.85rem; font-weight: 600; padding: 3px 11px; border-radius: 999px; background: var(--accent-soft); }
+  .plinks a:hover { text-decoration: none; filter: brightness(0.97); }
 
   .venue { display: inline-block; font-size: 0.8rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 1px 7px; border-radius: 4px; margin-right: 6px; }
   .me { font-weight: 600; color: var(--fg); }
@@ -112,6 +111,7 @@
     .avatar img { width: 96px; height: 96px; }
     h1 { font-size: 1.75rem; }
     .row { flex-direction: column; gap: 0; }
+    .project { grid-template-columns: 1fr; gap: 12px; }
   }
 </style>
 </head>
@@ -124,13 +124,12 @@
   </div>
   <div>
     <h1>Ming-Hen (Henry) Tsai</h1>
-    <p class="tagline">Machine learning practitioner · Member of Technical Staff at Arena · San Francisco Bay Area</p>
+    <p class="tagline">Machine learning leader · Member of Technical Staff at Arena · San Francisco Bay Area</p>
     <ul class="links">
       <li><a href="https://www.linkedin.com/in/henry-tsai-83b06327/">LinkedIn</a></li>
       <li><a href="https://github.com/hen-ml">GitHub</a></li>
-      <li><a href="#publications">Publications</a></li>
+      <li><a href="https://scholar.google.com/citations?user=-GrYdpYAAAAJ">Google Scholar</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#teaching">Teaching</a></li>
     </ul>
   </div>
 </header>
@@ -138,18 +137,9 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I'm a machine learning practitioner. My main expertise is in modeling dynamic environments, such as search and
-    recommendation systems, and in multilingual, multimodal (text, image and audio) content understanding at scale.
-  </p>
-  <p>
-    I'm a Member of Technical Staff at Arena, working on machine learning research. Before that I spent five years at
-    Coupang as the overall tech lead for search candidate generation and ranking, where I also led the ML strategy for
-    search and recommendations. Before Coupang I spent eight years at Google, working on ads, YouTube and large multimodal
-    models.
-  </p>
-  <p>
-    I've also been teaching since 2006, from competitive programming for high schoolers to data science at UC Berkeley
-    Extension. I speak Mandarin, English and Cantonese.
+    I'm a machine learning leader with 13+ years of shipping large-scale AI: search ranking and retrieval, multimodal
+    representation learning, and natural language understanding. I've led a 30+ engineer search organization at Coupang
+    and a multilingual, multimodal team in Google Research's BERT group, and I'm now a Member of Technical Staff at Arena.
   </p>
 </section>
 
@@ -158,43 +148,34 @@
   <ul class="entries">
     <li>
       <div class="row"><span class="title">Arena</span><span class="when">2026 – present</span></div>
-      <div class="meta">Member of Technical Staff</div>
-      <div class="desc">Machine learning research.</div>
+      <div class="meta">Member of Technical Staff · Machine learning research</div>
     </li>
     <li>
       <div class="row"><span class="title">Coupang</span><span class="when">2021 – 2026</span></div>
-      <div class="meta">Senior Staff Machine Learning Engineer</div>
-      <div class="desc">Overall tech lead for search candidate generation and ranking; led the ML strategy for search and recommendations.</div>
-    </li>
-    <li>
-      <div class="row"><span class="title">Stealth startup</span><span class="when">2020 – 2021</span></div>
-      <div class="meta">Co-founder</div>
-      <div class="desc">E-commerce.</div>
-    </li>
-    <li>
-      <div class="row"><span class="title">Google</span><span class="when">2012 – 2020</span></div>
-      <div class="meta">Software Engineer · Mountain View</div>
+      <div class="meta">Senior Staff ML Engineer · Organizational Tech Lead, Search &amp; Discovery</div>
       <div class="desc">
         <ul>
-          <li>2018–2020: multilingual multimodal encoders and large-model distillation</li>
-          <li>2016–2017: YouTube ads formats</li>
-          <li>2012–2016: content-based ads targeting and brand safety</li>
+          <li>Led 30+ engineers across search ranking and candidate generation; doubled the team's top-line engagement impact while scaling it 3x.</li>
+          <li>Scaled the conversion ranking model 100x with near-zero latency and cost overhead, lifting primary search engagement by double digits.</li>
+          <li>Launched generative retrieval on a unified text, image and tabular representation, enabling image search and natural-language tail queries.</li>
+          <li>Built Coupang's first deep-learning ranking model and a shared multimodal LLM for search signals.</li>
         </ul>
       </div>
     </li>
     <li>
-      <div class="row"><span class="title">Columbia University</span><span class="when">2011 – 2012</span></div>
-      <div class="meta">Research Assistant, Digital Video and Multimedia Lab</div>
-      <div class="desc">Content understanding through graphs.</div>
+      <div class="row"><span class="title">Google</span><span class="when">2012 – 2020</span></div>
+      <div class="meta">Tech Lead, Google Research · Senior Software Engineer, YouTube Ads Quality</div>
+      <div class="desc">
+        <ul>
+          <li>Led a multilingual, multimodal semantic understanding team within the BERT group; built multimodal encoder backbones for Search, Assistant and Gboard.</li>
+          <li>Created a BERT distillation method that shrank models without losing quality, serving billions of users.</li>
+          <li>Built YouTube Ads' first human-in-the-loop ML pipelines for brand safety and targeting, including a model that detects trending sensitive topics.</li>
+        </ul>
+      </div>
     </li>
     <li>
-      <div class="row"><span class="title">Siemens Corporate Research</span><span class="when">2010</span></div>
-      <div class="meta">Software Engineering Intern · Princeton, NJ</div>
-      <div class="desc">Time-series prediction from sensor data.</div>
-    </li>
-    <li>
-      <div class="row"><span class="title">National Taiwan University</span></div>
-      <div class="meta">Research Assistant, Machine Learning Lab · Teaching Assistant, Calculus</div>
+      <div class="row"><span class="title">Earlier</span></div>
+      <div class="meta">Research at Columbia's Digital Video and Multimedia Lab and NTU's Machine Learning Lab · Siemens Corporate Research</div>
     </li>
   </ul>
 </section>
@@ -203,99 +184,69 @@
   <h2>Education</h2>
   <ul class="entries">
     <li>
-      <div class="row"><span class="title">UC Berkeley, Haas School of Business</span><span class="when">2025 – 2026</span></div>
-      <div class="meta">Berkeley Chief Technology Officer Program, Executive Education · Certificate of Excellence</div>
-    </li>
-    <li>
       <div class="row"><span class="title">Columbia University</span><span class="when">2010 – 2012</span></div>
-      <div class="meta">M.S. Computer Science</div>
+      <div class="meta">M.S. Computer Science · Advisors: Shih-Fu Chang, Tony Jebara · Weakly supervised learning</div>
     </li>
     <li>
       <div class="row"><span class="title">National Taiwan University</span></div>
-      <div class="meta">B.S. Computer Science, minor in Mathematics</div>
+      <div class="meta">B.S. Computer Science and Mathematics · Advisor: Chih-Jen Lin · Active learning; contributions to LIBSVM and LIBLINEAR</div>
+    </li>
+    <li>
+      <div class="row"><span class="title">UC Berkeley, Haas School of Business</span><span class="when">2025 – 2026</span></div>
+      <div class="meta">Berkeley Chief Technology Officer Program · Certificate of Excellence</div>
     </li>
   </ul>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <ul class="entries">
-    <li>
-      <div class="title"><a href="https://arxiv.org/abs/2605.29232">On the Practice of Scaling Search Conversion Rate Prediction</a></div>
-      <div class="meta">James Pak, Jyun-Yu Jiang, Fan Zhang, Sen Wang, Taekmin Kim, <span class="me">Henry Tsai</span>, Vijay Rajaram, Juexin Lin, Mohitdeep Singh, Alessandro Magnani, Johnny Chen, Qian Zhao, Rao Fu, Zhirong Liang, Jordan Gilliland, Winter Jiao</div>
-      <div class="desc"><span class="venue">arXiv 2026</span>Scaling Coupang's production search CVR model</div>
-    </li>
-    <li>
-      <div class="title"><a href="https://www.semanticscholar.org/paper/275a647ea2417fd4739d15ab0a043df7ca2703e4">Solving Nonlinear SVM in Linear Time? A Nyström Approximated SVM with Applications to Image Classification</a></div>
-      <div class="meta"><span class="me">Ming-Hen Tsai</span>, Yi-Ren Yeh, Yuh-Jye Lee, Yu-Chiang Frank Wang</div>
-      <div class="desc"><span class="venue">MVA 2013</span>IAPR Conference on Machine Vision Applications</div>
-    </li>
-    <li>
-      <div class="title"><a href="https://doi.org/10.1109/CVPR.2012.6248023">Weak Attributes for Large-Scale Image Retrieval</a></div>
-      <div class="meta">Felix X. Yu, Rongrong Ji, <span class="me">Ming-Hen Tsai</span>, Guangnan Ye, Shih-Fu Chang</div>
-      <div class="desc"><span class="venue">CVPR 2012</span>IEEE Conference on Computer Vision and Pattern Recognition</div>
-    </li>
-    <li>
-      <div class="title"><a href="https://proceedings.mlr.press/v16/ho11a.html">Active Learning and Experimental Design with SVMs</a></div>
-      <div class="meta">Chia-Hua Ho, <span class="me">Ming-Hen Tsai</span>, Chih-Jen Lin</div>
-      <div class="desc"><span class="venue">JMLR W&amp;CP 2011</span>Active Learning and Experimental Design Workshop</div>
-    </li>
-    <li>
-      <div class="title"><a href="https://www.semanticscholar.org/paper/c3825d7d3e648550aaeb4a063e3d546c2ac5d4b0">Training Sparse Polynomial Expansion on Graph Features Fast in the R Package Recommendation System Contest</a></div>
-      <div class="meta"><span class="me">Ming-Hen Tsai</span></div>
-      <div class="desc"><span class="venue">2011</span>Write-up of the second-place Kaggle solution</div>
-    </li>
-    <li>
-      <div class="title"><a href="https://doi.org/10.1109/IJCNN.2010.5596668">Active Learning Strategies Using SVMs</a></div>
-      <div class="meta"><span class="me">Ming-Hen Tsai</span>, Chia-Hua Ho, Chih-Jen Lin</div>
-      <div class="desc"><span class="venue">IJCNN 2010</span>International Joint Conference on Neural Networks</div>
-    </li>
-  </ul>
+  <p>See my <a href="https://scholar.google.com/citations?user=-GrYdpYAAAAJ">Google Scholar profile</a>.</p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="projects">
-    <a class="card" href="https://github.com/hen-ml/turtlebot4-glassbox">
-      <div class="name">TurtleBot 4 Glass-box<span class="year">2026</span></div>
-      <div class="what">Vision navigation for TurtleBot 4: YOLO on the OAK-D VPU, A* + pure pursuit, a task DSL, and a live bird's-eye UI with replayable drives.</div>
-    </a>
-    <a class="card" href="https://hen-ml.github.io/html_games/">
-      <div class="name">HTML Games<span class="year">2026</span></div>
-      <div class="what">Browser games written in plain HTML and JavaScript. Playable online.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/canvas-course-agent">
-      <div class="name">Canvas Course Agent<span class="year">2026</span></div>
-      <div class="what">Downloads Canvas LMS course content and generates AI summaries, strategy briefs, and worked answers.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/coding-interview">
-      <div class="name">Coding Interview<span class="year">2026</span></div>
-      <div class="what">C++ solutions to interview problems, with benchmarks.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/maml-jax">
-      <div class="name">MAML in JAX<span class="year">2020</span></div>
-      <div class="what">A compact implementation of Model-Agnostic Meta-Learning in JAX.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/easyml">
-      <div class="name">EasyML</div>
-      <div class="what">Short, readable Python for common machine-learning applications, each in a few lines.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/kernel-decomposition">
-      <div class="name">Kernel Decomposition<span class="year">2014</span></div>
-      <div class="what">Decomposes kernels into explicit feature vectors so linear models can learn non-linear structure at scale.</div>
-    </a>
-    <a class="card" href="https://github.com/hen-ml/CoUS">
-      <div class="name">Counting on US<span class="year">2012</span></div>
-      <div class="what">Open-source platform that makes big health data personal. Second place at the NYC Health 2.0 Big Data Code-a-Thon.</div>
-    </a>
-    <div class="card">
-      <div class="name">Shredder Recovery<span class="year">2011</span></div>
-      <div class="what">Reconstructing documents from scanned shreds for the DARPA Shredder Challenge, at Columbia.</div>
+  <div class="project">
+    <a href="https://github.com/hen-ml/turtlebot4-glassbox"><img src="pics/projects/turtlebot.jpg" alt="Illustration of the TurtleBot 4 with its lidar, OAK-D camera spotting a ball, Raspberry Pi, and a phone showing the web UI" loading="lazy"></a>
+    <div>
+      <h3>TurtleBot 4 Glass-box<span class="year">2026</span></h3>
+      <p>
+        A robot you tell what to do, then watch think. YOLO runs on the OAK-D camera's VPU, lidar builds the map, and A*
+        with pure pursuit drives behaviors like "push the ball to the wall" or "follow me", sequenced by a small task DSL.
+        A phone-friendly web UI shows the live map, plan and detections, and every drive is recorded and replayable.
+      </p>
+      <ul class="plinks">
+        <li><a href="https://github.com/hen-ml/turtlebot4-glassbox">GitHub</a></li>
+        <li><a href="https://github.com/hen-ml/turtlebot4-glassbox/blob/main/docs/posters/poster-public.pdf">Poster (PDF)</a></li>
+      </ul>
     </div>
-    <a class="card" href="https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#weights_for_data_instances">
-      <div class="name">LIBSVM / LIBLINEAR instance weights</div>
-      <div class="what">Per-instance weighting for LIBSVM and LIBLINEAR, distributed through LIBSVM Tools.</div>
-    </a>
+  </div>
+  <div class="project">
+    <a href="https://hen-ml.github.io/html_games/"><img src="pics/projects/html-games.jpg" alt="The HTML Games launcher page, showing the AI Interview Prep games" loading="lazy"></a>
+    <div>
+      <h3>HTML Games<span class="year">2026</span></h3>
+      <p>
+        About twenty browser games in plain HTML and JavaScript, with no installs: AI-interview practice (AI Quiz Boss,
+        Loss Curve Doctor, Big-O Blitz), a piano and note-reading trainer, 19×19 Go against Claude, RPGs and arcade classics.
+      </p>
+      <ul class="plinks">
+        <li><a href="https://hen-ml.github.io/html_games/">Play</a></li>
+        <li><a href="https://github.com/hen-ml/html_games">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="project">
+    <a href="https://github.com/hen-ml/coding-interview"><img src="pics/projects/coding-interview.jpg" alt="Code excerpt: the FlashAttention-style online softmax loop from the online-softmax-attention problem" loading="lazy"></a>
+    <div>
+      <h3>Coding Interview<span class="year">2026</span></h3>
+      <p>
+        Self-contained problems for frontier ML engineer and research scientist interviews, each with a solution, a pytest
+        suite and follow-up questions. They cover LLM architecture (attention, RoPE, MoE, LoRA), post-training (DPO, GRPO),
+        inference (speculative decoding, quantization), classical ML and distributed systems.
+      </p>
+      <ul class="plinks">
+        <li><a href="https://github.com/hen-ml/coding-interview">GitHub</a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
